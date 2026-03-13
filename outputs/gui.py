@@ -19,11 +19,16 @@ st.title("Assistant de Diagnostic de Maladie Coronarienne")
 st.write("Ajustez les mesures dans le panneau lateral pour obtenir une prediction du risque a 10 ans.")
 
 # Image descriptive (Wikimedia Commons - domaine public)
-st.image(
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Blausen_0257_CoronaryArteryDisease_02.png/1200px-Blausen_0257_CoronaryArteryDisease_02.png",
-    caption="Maladie coronarienne : retrecissement des arteres coronaires par des plaques d'atherome",
-    use_container_width=True
-)
+# Image locale (a placer dans outputs/images/coronary_disease.png)
+img_path = BASE_DIR / "images" / "coronary_disease.png"
+if img_path.exists():
+    st.image(
+        str(img_path),
+        caption="Maladie coronarienne : retrecissement des arteres coronaires par des plaques d'atherome",
+        use_container_width=True
+    )
+else:
+    st.warning("Image non trouvee. Placez 'coronary_disease.png' dans le dossier outputs/images/")
 
 st.markdown("---")
 
