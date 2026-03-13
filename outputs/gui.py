@@ -3,7 +3,9 @@ import joblib as jlb
 import numpy as np
 
 # 1. Chargement du modele
-model  = jlb.load("best_model.pkl")
+from pathlib import Path
+BASE_DIR = Path(__file__).parent
+model = jlb.load(BASE_DIR / "best_model.pkl")
 
 # 2. Configuration de l'interface utilisateur
 st.set_page_config(page_title="Diagnostic Medical AI", page_icon=":heart:", layout="centered")
