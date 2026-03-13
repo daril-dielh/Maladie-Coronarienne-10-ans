@@ -4,7 +4,6 @@ import numpy as np
 
 # 1. Chargement du modele
 model  = jlb.load("best_model.pkl")
-scaler = jlb.load("scaler.pkl")
 
 # 2. Configuration de l'interface utilisateur
 st.set_page_config(page_title="Diagnostic Medical AI", page_icon=":heart:", layout="centered")
@@ -50,9 +49,8 @@ input_df = user_input_features()
 
 # 4. Bouton de prediction
 if st.button("Lancer le Diagnostic"):
-    input_scaled = scaler.transform(input_df)
-    prediction   = model.predict(input_scaled)
-    probability  = model.predict_proba(input_scaled)  # probabilite de la prediction
+    prediction   = model.predict(input_df)
+    probability  = model.predict_proba(input_df)  # probabilite de la prediction
 
     st.subheader("Resultat du modele")
 
