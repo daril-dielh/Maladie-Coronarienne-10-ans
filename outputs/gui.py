@@ -25,7 +25,7 @@ if img_path.exists():
     st.image(
         str(img_path),
         caption="Maladie coronarienne : retrecissement des arteres coronaires par des plaques d'atherome",
-        use_container_width=True
+        use_container_width=False
     )
 else:
     st.warning("Image non trouvee. Placez 'coronary_disease.png' dans le dossier outputs/images/")
