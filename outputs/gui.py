@@ -19,8 +19,8 @@ st.title("Assistant de Diagnostic de Maladie Coronarienne")
 st.write("Ajustez les mesures dans le panneau lateral pour obtenir une prediction du risque a 10 ans.")
 
 # Image descriptive (Wikimedia Commons - domaine public)
-# Image locale (a placer dans outputs/images/coronary_disease.png)
-img_path = BASE_DIR / "images" / "coronary_disease.png"
+# Image locale (a placer dans outputs/coronary_disease.png)
+img_path = BASE_DIR / "heartdisease.jpg"
 if img_path.exists():
     st.image(
         str(img_path),
