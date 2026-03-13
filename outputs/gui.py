@@ -37,10 +37,10 @@ st.sidebar.header("Parametres du Patient")
 st.sidebar.markdown("Renseignez les valeurs cliniques du patient :")
 
 def user_input_features():
-    age          = st.sidebar.slider("Age du patient (ans)",          32,  90,  50)
+    age          = st.sidebar.slider("Age du patient (ans)",          18,  90,  50)
     male         = st.sidebar.selectbox("Sexe", options=[0, 1],
                        format_func=lambda x: "Femme" if x == 0 else "Homme")
-    sysBP        = st.sidebar.slider("Pression systolique (mmHg)",    80, 295, 130)
+    sysBP        = st.sidebar.slider("Pression systolique (mmHg)",    70, 295, 130)
     diaBP        = st.sidebar.slider("Pression diastolique (mmHg)",   40, 150,  85)
     prevalentHyp = st.sidebar.selectbox("Hypertension preexistante", options=[0, 1],
                        format_func=lambda x: "Non" if x == 0 else "Oui")
