@@ -20,7 +20,7 @@ st.write("Ajustez les mesures dans le panneau lateral pour obtenir une predictio
 
 # Image descriptive (Wikimedia Commons - domaine public)
 # Image locale (a placer dans outputs/coronary_disease.png)
-img_path = BASE_DIR / "heartdisease.jpg"
+img_path = BASE_DIR / "coronary.jpg"
 if img_path.exists():
     st.image(
         str(img_path),
