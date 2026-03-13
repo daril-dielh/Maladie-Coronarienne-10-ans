@@ -17,7 +17,7 @@ st.write("Ajustez les mesures ci-dessous pour obtenir une prediction du modele")
 st.sidebar.header("Parametres Cardiaques du Patient")
 
 def user_input_features():
-    age          = st.sidebar.slider("Age du Patient (ans)",               32,  70,  50)
+    age          = st.sidebar.slider("Age du Patient (ans)",               32,  90,  50)
     male         = st.sidebar.selectbox("Sexe", options=[0, 1], format_func=lambda x: "Femme" if x == 0 else "Homme")
     sysBP        = st.sidebar.slider("Pression Systolique (mmHg)",         80, 295, 130)
     diaBP        = st.sidebar.slider("Pression Diastolique (mmHg)",        40, 150,  85)
