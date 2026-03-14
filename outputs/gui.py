@@ -30,7 +30,7 @@ if img_path.exists():
 else:
     st.warning("Image non trouvee. Placez 'coronary_disease.png' dans le dossier outputs/images/")
 
-st.markdown("---")
+
 
 # 4. Panneau lateral - Saisie des parametres
 st.sidebar.header("Parametres du Patient")
@@ -78,7 +78,7 @@ with st.expander("Recapitulatif des parametres saisis", expanded=False):
     col1.metric("Score de risque calcule", risk_score)
     col2.metric("Pression pulsee", f"{sysBP - diaBP} mmHg")
 
-st.markdown("---")
+
 
 # 6. Bouton de prediction
 if st.button("Lancer le Diagnostic", use_container_width=True):
@@ -128,7 +128,7 @@ if st.button("Lancer le Diagnostic", use_container_width=True):
         st.error("Score de risque eleve (4 et plus)")
 
 # 7. Note legale
-st.markdown("---")
+
 st.info(
     "**Note importante** : Cet outil est base sur un modele de Regression Logistique "
     "entraine sur l'etude Framingham Heart Study. Il constitue une **aide a la decision** "
